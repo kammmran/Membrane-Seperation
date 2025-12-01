@@ -63,6 +63,21 @@ pip install numpy matplotlib scipy
 - Compare different membrane materials
 - Calculate capture costs
 
+## Building Executable
+
+To create a standalone executable that doesn't require Python:
+
+```bash
+pip install pyinstaller
+pyinstaller --onefile --windowed --name=MembraneSimulator --exclude-module=PyQt5 --exclude-module=PyQt6 interactive_simulator_compact.py
+```
+
+The executable will be in the `dist` folder.
+
+**Note for macOS users:** The build creates `MembraneSimulator.app` which you can double-click to run.
+
+**Note for Windows users:** Use the same command - it will create `MembraneSimulator.exe`
+
 ## Support
 
 For questions or issues, please refer to the code documentation or modify parameters in the GUI.
